@@ -41,6 +41,18 @@
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="bc810c3b-0e2b-4fe7-b80b-e9edfeba5373" />
   </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="bc810c3b-0e2b-4fe7-b80b-e9edfeba5373" dataset="main.movies_movieshot" active-filter-id="31d7c7fc-ee41-469d-9bcf-c5f7bcb3cf1f">
+      <filter id="31d7c7fc-ee41-469d-9bcf-c5f7bcb3cf1f" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="bc810c3b-0e2b-4fe7-b80b-e9edfeba5373" dataset="main.movies_review" active-filter-id="65fd9611-ddc0-4aeb-9fb6-9976cb30ef98">
+      <filter id="65fd9611-ddc0-4aeb-9fb6-9976cb30ef98" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+  </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
   </component>
