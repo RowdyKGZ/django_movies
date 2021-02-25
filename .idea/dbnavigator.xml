@@ -42,6 +42,11 @@
     <connection id="bc810c3b-0e2b-4fe7-b80b-e9edfeba5373" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="bc810c3b-0e2b-4fe7-b80b-e9edfeba5373" dataset="main.movies_movie" active-filter-id="b41cce63-c630-4522-85c9-2ab0b668fffd">
+      <filter id="b41cce63-c630-4522-85c9-2ab0b668fffd" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
     <filter-actions connection-id="bc810c3b-0e2b-4fe7-b80b-e9edfeba5373" dataset="main.movies_movieshot" active-filter-id="31d7c7fc-ee41-469d-9bcf-c5f7bcb3cf1f">
       <filter id="31d7c7fc-ee41-469d-9bcf-c5f7bcb3cf1f" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id" operator="=" value="" active="true" />
