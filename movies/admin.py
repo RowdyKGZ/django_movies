@@ -49,6 +49,7 @@ class MovieAdmin(admin.ModelAdmin):
     search_fields = ('title', 'category__name')
     inlines = [MovieShotsInline, ReviewInLine]
     form = MovieAdminForm
+    actions = ['publish', 'unpublish']
     save_on_top = True
     save_as = True
     list_editable = ('draft',)
@@ -81,7 +82,7 @@ class MovieAdmin(admin.ModelAdmin):
     def unpublish(self, request, queryset):
         """Снять с публикации"""
         row_update = queryset.update(draft=True)
-        if row_update == '1':
+        if row_update == 1:
             message_bit = '1 запись обновлена'
         else:
             message_bit = f'{row_update} записей обновлены'
@@ -90,7 +91,7 @@ class MovieAdmin(admin.ModelAdmin):
     def publish(self, request, queryset):
         """Опубликавать"""
         row_update = queryset.update(draft=False)
-        if row_update == '1':
+        if row_update == 1:
             message_bit = '1 запись обновлена'
         else:
             message_bit = f'{row_update} записей обновлены'
