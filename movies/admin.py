@@ -9,6 +9,7 @@ from .models import Category, Actor, Genre, Movie, MovieShot, Rating, RatingStar
 
 
 class MovieAdminForm(forms.ModelForm):
+    """Подключение CKeditor для описания"""
     description = forms.CharField(label='Описание', widget=CKEditorUploadingWidget())
 
     class Meta:
@@ -31,6 +32,7 @@ class ReviewInLine(admin.TabularInline):
 
 
 class MovieShotsInline(admin.TabularInline):
+    """Инлайг для фоток фильма"""
     model = MovieShot
     extra = 1
     readonly_fields = ('get_image',)
@@ -75,6 +77,7 @@ class MovieAdmin(admin.ModelAdmin):
     )
 
     def get_image(self, obj):
+        """Отображение каринок в админке"""
         return mark_safe(f'<img src={obj.poster.url} width="100" height="110"')
 
     get_image.short_description = 'Изображение'
