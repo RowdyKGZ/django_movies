@@ -17,40 +17,35 @@
             </div>
             <div class="desc1-right col-md-6 pl-lg-4">
                 <h3 class="editContent">
+                    {{ movie.title }}
                 </h3>
                 <h5 class="editContent"></h5>
                 <ul>
-                    <li style="list-style: none">
+                    <li>
                         <span><b>Возраст:</b> {{ actor.age }} лет</span></li>
-                    <li style="list-style: none">
+                    <li>
                         <span><b>Режиссер:</b>
                             {% for movie in actor.film_director.all %}
-                                {{ movie.title }} <br>
+                                {{ movie.title }}
                             {% endfor %}
                         </span>
                     </li>
-                    <li style="list-style: none"><span><b>Актеры:</b>
+                    <li><span><b>Актер:</b>
                         {% for movie in actor.film_actor.all %}
-                            {{ movie.title }} <br>
+                            {{ movie.title }}
                         {% endfor %}
-                                </span>
-                    </li>
+                    </span>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="row sub-para-w3layouts mt-5">
-
             <h3 class="shop-sing editContent">
                 О {{ actor.name }}
             </h3>
-
-        </div>
             <p class="editContent">
                 {{ actor.description|safe }}
             </p>
-        <hr>
-    </div>
+        </div>
     </div>
 {% endblock movie %}
-    </div>

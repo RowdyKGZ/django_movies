@@ -9,7 +9,7 @@
     </form>
 </div>
 <!--preference -->
-<form action="{% url 'filter' %}" method="get">
+<form action="{% url 'filter' %}" method="get" name="filter">
     <div class="left-side my-4">
         <h3 class="sear-head editContent">Жанры</h3>
         <ul class="w3layouts-box-list">
@@ -21,17 +21,17 @@
             {% endfor %}
         </ul>
     </div>
-<!-- // preference -->
-<!-- discounts -->
+    <!-- // preference -->
+    <!-- discounts -->
 
     <div class="left-side">
         <h3 class="sear-head editContent">Год</h3>
         <ul class="w3layouts-box-list">
             {% for movie in view.get_years %}
-            <li class="editContent">
-                <input type="checkbox" class="checked" name="year" value="{{ movie.year }}">
-                <span class="span editContent">{{ movie.year }}</span>
-            </li>
+                <li class="editContent">
+                    <input type="checkbox" class="checked" name="year" value="{{ movie.year }}">
+                    <span class="span editContent">{{ movie.year }}</span>
+                </li>
             {% endfor %}
         </ul>
     </div>
@@ -94,6 +94,4 @@
         </li>
     </ul>
 </div>
-<!-- //reviews -->
-<!-- deals -->
-{% get_last_movies count=5 %}
+{% get_last_movies count=3 %}
