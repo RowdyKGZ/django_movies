@@ -26,7 +26,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="bc810c3b-0e2b-4fe7-b80b-e9edfeba5373">
-        <schema name="main" object-types="view, table" />
+        <schema name="main" object-types="view, constraint, index, table, column, dataset trigger" />
       </connection>
     </loaded-nodes>
   </component>
@@ -42,6 +42,11 @@
     <connection id="bc810c3b-0e2b-4fe7-b80b-e9edfeba5373" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="bc810c3b-0e2b-4fe7-b80b-e9edfeba5373" dataset="main.movies_movie_directors" active-filter-id="c422b56c-2528-49ff-a11b-1130d5c10bf1">
+      <filter id="c422b56c-2528-49ff-a11b-1130d5c10bf1" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
     <filter-actions connection-id="bc810c3b-0e2b-4fe7-b80b-e9edfeba5373" dataset="main.movies_movie" active-filter-id="b41cce63-c630-4522-85c9-2ab0b668fffd">
       <filter id="b41cce63-c630-4522-85c9-2ab0b668fffd" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id" operator="=" value="" active="true" />
