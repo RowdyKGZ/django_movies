@@ -15,10 +15,6 @@
     <!--// Style-CSS -->
     <!-- font-awesome-icons -->
     <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
-
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
     <!-- //font-awesome-icons -->
     <!-- /Fonts -->
     <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700"
@@ -27,8 +23,8 @@
           rel="stylesheet">
     <!-- //Fonts -->
 
-    {% recaptcha_init %}
-    {% recaptcha_ready action_name='homepage' %}
+      {% recaptcha_init %}
+      {% recaptcha_ready action_name='homepage' %}
 </head>
 <body>
 <div id="page" class="page">
@@ -37,7 +33,7 @@
     </div>
     <ol class="breadcrumb editContent">
         <li class="breadcrumb-item">
-            <a href="index.html" class="editContent">Home</a>
+            <a href="{% url 'main_url' %}" class="editContent">Home</a>
         </li>
         <li class="breadcrumb-item active editContent">Single Page</li>
     </ol>

@@ -1,4 +1,4 @@
-{{% load i18n movie_tag %}
+{% load i18n movie_tag %}
 <header class="header">
     <div class="container-fluid px-lg-5">
         <!-- nav -->
@@ -27,9 +27,19 @@
                         {% endfor %}
                     </ul>
                 </li>
-                <li><a href="contact.html"
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'account_logout' %}"
+                       style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">Выход</a>
+                </li>
+                <span>{{ user.username.title }}</span>
+                {% else %}
+                <li><a href="{% url 'account_login' %}"
                        style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">Вход</a>
                 </li>
+                <li><a href="{% url 'account_signup' %}"
+                       style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">Регистрация</a>
+                </li>
+                {% endif %}
 
                 <li>
                     <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
