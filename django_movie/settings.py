@@ -35,6 +35,26 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.vk',
 ]
 
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '&49p1mhdasda&l*m5iw62hki+7_+6fr8cm7s7josadm1mgsbtl(mm7'
+
+
+DEBUG = True
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'movie',
+        'USER': 'movie_user',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
+ALLOWED_HOSTS = ['*']
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -126,6 +146,9 @@ LOCALE_PATHS = (
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [STATIC_DIR]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -207,8 +230,8 @@ RECAPTCHA_SCORE_THRESHOLD = 0.5
 
 SITE_ID = 1
 
-
-try:
-    from .local_settings import *
-except ImportError:
-    from .prod_settings import *
+#
+# try:
+#     from .local_settings import *
+# except ImportError:
+#     from .prod_settings import *
